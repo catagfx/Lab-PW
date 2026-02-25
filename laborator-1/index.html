@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina mea de prezentare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<script>
+    alert("Hello World!");
+</script>
+
+<header>
+    <h1>Bocioc Marian-Catalin</h1>
+    <p>UNITBV - IESC</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">Despre</a></li>
+        <li><a href="#education">Educație</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <section id="about">
+        <h2>Despre mine</h2>
+        <img src="images/profil.jpg" alt="Imagine de profil" loading="lazy">
+        <p>
+						<li>Sunt student pasionat de programare web si dezvoltare software.</li>
+            <li>Imi place sa invat tehnologii noi si sa creez aplicatii interactive.</li>
+        </p>
+    </section>
+
+    <section id="education">
+        <h2>Educatie</h2>
+        <ol>
+            <li>2024 - prezent: Universitatea Transilvania din Brasov - Facultatea: IESC - Specializare: Calculatoare</li>
+            <li>2020 - 2024: Colegiul "Spiru Haret" Ploiesti - Specializare: Matematica-Informatica</li>
+            <li>2012 - 2020: Scoala Gimnaziala "Carol I" Plopeni</li>
+        </ol>
+    </section>
+
+</main>
+
+<aside>
+    <h3>Hobby-uri</h3>
+    <p>Programare, citit, sport</p>
+</aside>
+
+<footer id="contact">
+    <h2>Contact</h2>
+
+    <form>
+        <label for="name">Nume:</label>
+        <input type="text" id="name" autocomplete="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" autocomplete="email" required>
+
+        <label for="message">Mesaj:</label>
+        <textarea id="message" required minlength="10"></textarea>
+
+        <button type="submit" onclick="submitForm()">Trimite</button>
+    </form>
+
+    <p>&copy; 2026 Bocioc Marian-Catalin</p>
+    <address>Email: <a href="mailto:marian.bocioc@student.unitbv.ro" class="email-link" style="color: rgb(255, 255, 255); text-decoration: none; font-weight: bold;">
+        marian.bocioc@student.unitbv.ro
+    </a></address>
+
+    <script src="js/contact_form.js"></script>
+</footer>
+
+</body>
+</html>
