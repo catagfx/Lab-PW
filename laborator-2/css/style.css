@@ -152,3 +152,82 @@ button:hover {
     padding: 10px 12px;
     border-radius: 6px;
 }
+/* ========== GLASS EFFECT (fără modificări HTML) ========== */
+
+/* fundal mai “soft”, cu un gradient discret */
+body {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(52,152,219,0.20), transparent 45%),
+    radial-gradient(circle at 90% 30%, rgba(44,62,80,0.18), transparent 45%),
+    radial-gradient(circle at 30% 90%, rgba(52,152,219,0.14), transparent 50%),
+    var(--background-color);
+}
+
+/* Card-uri glass pentru principalele zone */
+header,
+main section,
+aside,
+footer {
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* spațiere frumoasă în interior (nu schimbă layout, doar padding) */
+main section,
+aside {
+  padding: 16px;
+}
+
+/* header/footer aveau deja fundal solid; îl păstrăm dar îl “glass-uim” discret */
+header, footer {
+  background: rgba(44, 62, 80, 0.65);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+/* Nav: sticlă subtilă, fără să strice butoanele */
+nav ul {
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* input/textarea - sticlă */
+input, textarea {
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.20);
+  color: var(--text-color);
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(0,0,0,0.55);
+}
+
+/* în dark mode: sticla devine mai “închisă” și textul rămâne vizibil */
+body.dark-mode header,
+body.dark-mode main section,
+body.dark-mode aside,
+body.dark-mode footer,
+body.dark-mode nav ul {
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+  background: rgba(0,0,0,0.20);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: var(--text-color);
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: rgba(255,255,255,0.65);
+}
