@@ -1,0 +1,6 @@
+[
+  { "name": "Site prezentare", "tech": "HTML/CSS/JS", "done": true },
+  { "name": "Formular contact validat", "tech": "JavaScript", "done": true },
+  { "name": "Dark Mode Toggle", "tech": "CSS Variables + JS", "done": true },
+  { "name": "Galerie foto", "tech": "HTML/CSS", "done": false }
+]
